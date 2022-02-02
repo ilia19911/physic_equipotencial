@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:physic_equipotencial.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+        xmlns:local="using:physic_equipotencial.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="physic_equipotencial.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="physic_equipotencial">
+
+    <Design.DataContext>RoutedEventArgs
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <Grid>
+        <local:EqFields Command="{Binding Pressed}">
+
+        </local:EqFields>
+    </Grid>
+    
+</Window>

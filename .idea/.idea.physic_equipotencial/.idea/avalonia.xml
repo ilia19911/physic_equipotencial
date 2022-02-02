@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="physic_equipotencial/App.axaml" value="physic_equipotencial/physic_equipotencial.csproj" />
+        <entry key="physic_equipotencial/Views/EqFields.axaml" value="physic_equipotencial/physic_equipotencial.csproj" />
+        <entry key="physic_equipotencial/Views/MainWindow.axaml" value="physic_equipotencial/physic_equipotencial.csproj" />
+        <entry key="physic_equipotencial/Views/chart.axaml" value="physic_equipotencial/physic_equipotencial.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
