@@ -8,13 +8,29 @@
              xmlns:local="using:physic_equipotencial.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="physic_equipotencial.Views.EqFields">
+    <UserControl.Styles> 
+        <Style Selector="lvc|CartesianChart">
+            <Setter Property="TooltipTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
     <Grid>
-        <lvc:CartesianChart  XAxes="{Binding XAxes}"  Series="{Binding Series, Mode=TwoWay }">
+        <lvc:CartesianChart Name="MyChart" x:Name="MyChart" TooltipFindingStrategy="CompareOnlyX" TooltipPosition="Center"   TooltipBackground="Transparent"  XAxes="{Binding XAxes}"  Series="{Binding Series ,  Mode=TwoWay }">
             <i:Interaction.Behaviors>
                 <ia:EventTriggerBehavior EventName="PointerPressed">
                     <ia:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource FindAncestor, 
+                        AncestorType={x:Type local:EqFields}}, 
+                        Path=Pressed}" />
+                </ia:EventTriggerBehavior>
+                <ia:EventTriggerBehavior EventName="DataPointerDown">
+                    <ia:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource FindAncestor, 
                   AncestorType={x:Type local:EqFields}}, 
-                  Path=Pressed}" />
+                  Path=DoTheThing}" />
                 </ia:EventTriggerBehavior>
             </i:Interaction.Behaviors>
         </lvc:CartesianChart>
