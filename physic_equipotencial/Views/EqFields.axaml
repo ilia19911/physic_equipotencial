@@ -20,7 +20,7 @@
         </Style>
     </UserControl.Styles>
     <Grid>
-        <lvc:CartesianChart Name="MyChart" x:Name="MyChart" TooltipFindingStrategy="CompareOnlyX" TooltipPosition="Center"   TooltipBackground="Transparent"  XAxes="{Binding XAxes}"  Series="{Binding Series ,  Mode=TwoWay }">
+        <lvc:CartesianChart Name="MyChart"  x:Name="MyChart" TooltipFindingStrategy="CompareOnlyX" TooltipPosition="Center"   TooltipBackground="Transparent"  YAxes="{Binding YAxes}"  XAxes="{Binding XAxes}"  Series="{Binding Series ,  Mode=TwoWay }">
             <i:Interaction.Behaviors>
                 <ia:EventTriggerBehavior EventName="PointerPressed">
                     <ia:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource FindAncestor, 
